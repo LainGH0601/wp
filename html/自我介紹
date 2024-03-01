@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>王莉允的自我介紹</title>
+    <style>
+        body {
+            font-family: "微軟正黑體", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>你好，我是王莉允</h1>
+        <p>我是金門大學電機工程學系的學生，專注於學習電機工程相關的知識和技能。</p>
+        <h2>我的興趣</h2>
+        <p>我非常喜歡畫圖，這是我業餘時間最大的樂趣。透過畫圖，我可以表達自己的想法和情感，同時也能夠放鬆心情。</p>
+        <img src="path-to-your-drawing.jpg" alt="王莉允的畫作">
+        <p>感謝您訪問我的自我介紹頁面，如果你對我的作品或學習經歷感興趣，歡迎進一步交流。</p>
+    </div>
+</body>
+</html>
