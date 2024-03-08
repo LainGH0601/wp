@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>註冊</h2>
+
+<form action="/action_page.php">
+  <label for="name">姓名:</label><br>
+  <input type="text" id="name" name="name" value="Ally"><br>
+  <label for="account">帳號:</label><br>
+  <input type="text" id="account" name="account" value="Fred611"><br>
+  <label for="password">密碼:</label><br>
+  <input type="password" id="password" name="password" value="12334"><br>
+  <label for="email">email:</label><br>
+  <input type="email" id="email" name="email" value="s111@student.nqu.edu.tw"><br><br>
+  <fieldset>
+  <label for="gender">性別:</label><br>
+  <input type="radio" id="gender" name="gender" value="man" >
+  <label for="man">男</label>
+  <input type="radio" id="gender" name="gender" value="woman" >
+  <label for="woman">女</label>
+  <input type="radio" id="gender" name="gender" value="other">
+  <label for="other">其他</label>
+  </fieldset>
+  <br>
+  <label for="birthday">生日:</label><br>
+  <input type="date" id="birthday" name="birthday" value=""><br>
+  <label for="favcolor">喜歡的顏色:</label><br>
+  <input type="color" id="favcolor" name="favcolor" value="#e66465"><br>
+  <label for="favcolor">血型:</label><br>
+  <select name="bloodtype" id="bloodtype">
+  <option value="">--Please choose an option--</option>
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="O">O</option>
+  <option value="AB">AB</option>
+</select><br>
+  <label for="phonenum">電話:</label><br>
+  <input type="tel" id="phonenum" name="phonenum" value="091234567"><br>
+  <label for="abtmyself">自我介紹:</label><br>
+  <textarea id="abtmyself" name="abtmyself" rows="5" cols="33">
+  </textarea><br>
+  <br>
+  <input type="checkbox" id="sub" name="sub" value="">
+  <label for="sub">訂閱金大周刊</label><br>
+  <label for="appendix">附件:</label><br>
+  <input type="file" id="appendix" name="appendix" value=""><br>
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
