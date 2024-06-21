@@ -1,0 +1,90 @@
+<!doctype HTML>
+<html lang="en">
+    <HEAD>
+      <meta charset="UTF-8">
+        
+        <TITLE>購物車</TITLE>
+        <script src="shop.js"></script>
+        <style>
+         table {
+            border: 1px solid black;
+            }
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+   
+        </style>
+        <script src="shop.js"></script>
+        
+         
+         
+    </HEAD>
+
+
+<body >
+    <div id="app">
+        <table>
+          <tr>
+            <th>序號</th>
+            <td>商品名稱</td>
+            <td>商品價格</td>
+            <td>購買數量</td>
+            <td>操作</td>
+          </tr>
+          <tr v-for="iphone in Ip_Json">
+            <td>{{ iphone.id }}</td>
+            <td>{{ iphone.name }}</td>
+            <td>{{ iphone.price }}</td>
+            <td>
+              <button :disabled="iphone.count === 0" @click="iphone.count-=1">-</button>
+              {{ iphone.count }}
+              <button @click="iphone.count+=1">+</button>
+            </td>
+            <td>
+              <button @click="iphone.count=0">刪除</button>
+            </td>
+          </tr>
+        </table>
+        總價：$ {{totalPrice()}}
+      </div> 
+
+        
+        
+           
+        
+
+    
+</body>
+<script>
+  let vm = new Vue(
+    {
+  el:'#app',
+  data:{    
+    Ip_Json:[
+      {id:210,name:'IPhone1',price:6010,count:0},
+      {id:1102,name:'IPhone6',price:2556,count:0},
+      {id: 123,name: 'Iphone 8',price: 5099,count: 0,}
+    ]
+  },
+  methods: {
+    totalPrice: function () {
+      var totalP = 0;
+      
+      for (var i = 0, len = this.Ip_Json.length; i < len; i++) {
+        totalP += this.Ip_Json[i].price * this.Ip_Json[i].count;
+      }
+      return totalP;
+    }
+  }
+})
+</script>
+</html>
+
+

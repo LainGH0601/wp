@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+    
+    <style>
+    table {
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+        html {
+  background-color: #B9B9FF;
+}
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FFFFCC;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+
+        /* label,
+        input ,
+        select,
+        option{
+          
+          background-color: lightgrey;
+          width: 200px;
+          border: 15px solid #597FA5;
+          padding: 50px;
+          margin: 100px; 
+          
+          
+        } */
+        
+        </style>
+<body>
+
+<h2>購物車</h2><br>
+<div id="app">
+    <form>
+    <table>
+      <tr>
+        <th>序號</th>
+        <td>商品名稱</td>
+        <td>商品價格</td>
+        <td>購買數量</td>
+        
+      </tr>
+      
+      <tr >
+        <td>1</td>
+        <td>鮭魚卵飯糰</td>
+        <td>180</td>
+        <td>
+          
+          <input type="number" value="0" min="0" max="100" step="1" id="buyForm" class="oni1" class="form-control">
+          
+        </td>
+      
+      </tr>
+
+      <tr >
+        <td>2</td>
+        <td>鹿尾菜飯糰</td>
+        <td>150</td>
+        <td>
+          
+          <input type="number" value="0" min="0" max="100" step="1" id="buyForm" class="oni2" class="form-control">
+          
+        </td>
+   
+      </tr>
+
+      <tr >
+        <td>3</td>
+        <td>梅干飯糰</td>
+        <td>120</td>
+        <td>
+          
+          <input type="number" value="0" min="0" max="100" step="1" id="buyForm" class="oni3" class="form-control">
+          
+        </td>
+      
+      </tr>
+    </table>
+    <br>
+    
+    <input class='popuptest' type="button" value="送出" id="buyForm"  class="form-control">
+    <p class='show'></p>
+  <!-- <input class="button" type="submit" value="送出" id="buyForm"  class="form-control" class='popuptest'> -->
+  
+  <script>
+        var button = document.querySelector('.popuptest');
+    var showtxt = document.querySelector('.show');
+
+
+    button.addEventListener('click', popup2);
+    function popup2(e) {
+        window.confirm('確定要送出嗎?');
+        if (confirm('確定要送出嗎?') == true) {
+            showtxt.innerHTML = '下單成功';
+        } else {
+            showtxt.innerHTML = '您已取消';
+        }
+
+    };
+    let buyForm = document.getElementById("buyForm");
+    let oni1 = document.getElementsByClassName('oni1');
+    let oni2 = document.getElementsByClassName('oni2');
+    let oni3 = document.getElementsByClassName('oni3');
+    buyForm.addEventListener("submit", (e) => {
+       
+        
+        e.preventDefault();});
+    console.log(oni1[0]);
+</script>
+
+</form>
+   
+  </div>
+
+  
+
+  
+
+
+
+
+</body>
+</html>
