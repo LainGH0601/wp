@@ -69,3 +69,6 @@ https://github.com/LainGH0601/wp/tree/master/homework/HOMEWORK7
 加上雜湊後顯示[object Promise] 失敗
 
 網頁:https://laingh0601.github.io/wp/homework/HOMEWORK7/hw7/hw7.html
+
+作業6-1和作業7有問題
+作業4-8 作業6-2 作業8~11未完成
