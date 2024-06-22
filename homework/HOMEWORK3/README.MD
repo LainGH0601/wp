@@ -1,5 +1,6 @@
 作業3
-第五題參考//https://ithelp.ithome.com.tw/m/articles/10247892
+第六題參考//https://ithelp.ithome.com.tw/m/articles/10247892
+第七題修改自第六題
 其他為原創
 複製function
   function matrixAddition(a, b){
