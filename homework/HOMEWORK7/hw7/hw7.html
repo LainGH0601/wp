@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <style>
+        html {
+  background-color: #B9B9FF;
+}
+body {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #FFFFCC;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+
+        /* label,
+        input ,
+        select,
+        option{
+          
+          background-color: lightgrey;
+          width: 200px;
+          border: 15px solid #597FA5;
+          padding: 50px;
+          margin: 100px; 
+          
+          
+        } */
+        
+        </style>
+<body>
+
+<h2>註冊</h2><br>
+
+<form action="/action_page.php">
+
+
+  <label for="abtmyself">data:</label><br>
+  <textarea id="myInput" name="abtmyself" rows="10" cols="100" oninput="myFunction()">
+  </textarea><br>
+  <br>
+  <p id="demo"></p>
+  
+  
+</form> 
+
+<script>
+      
+    async function hash(string) {
+    const utf8 = new TextEncoder().encode(string);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray
+      .map((bytes) => bytes.toString(16).padStart(2, '0'))
+      .join('');
+    return hashHex;
+}
+  function myFunction() {
+        var x = document.getElementById("myInput").value;
+        document.getElementById("demo").innerHTML = "你输入的是: " + hash(x);
+    }
+</script>
+
+
+
+</body>
+</html>
